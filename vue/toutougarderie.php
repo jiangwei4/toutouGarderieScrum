@@ -18,7 +18,14 @@
 		if ($_SESSION['id']==''){
 			include("../modele/connexion.php");
 		}
+		
+		if ($_SESSION['id']!=''){
+			include("../modele/deconnexion.php");
+			
+		}
+		echo $_SESSION['id'];
 	?>
+	
 
     
 
