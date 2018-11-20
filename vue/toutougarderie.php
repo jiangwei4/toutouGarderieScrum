@@ -13,8 +13,11 @@
     <title>toutou garderie</title>
 </head>
 <body>
-   <?php
-		include("../modele/inscription.php");
+   <?php 
+		session_start();
+		if ($_SESSION['id']==''){
+			include("../modele/connexion.php");
+		}
 	?>
 
     
