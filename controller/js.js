@@ -90,3 +90,60 @@ function inscription2() {
 		alert("login ou mot de passe vide ");
 	}
 }
+
+function afficherAjouterAnimal(){
+		if(document.getElementById("formulaireAjoutAnimal").innerText === '' ){
+	document.getElementById("formulaireAjoutAnimal").innerHTML = `<h1><center><b>Ajouter Animal</b></center></h1>
+			<form class="w3-container" name="formulaire1">
+				<label class="w3-label w3-text-blue">
+					<b>Race</b>
+				</label>
+				<input name="race" type="text" id="race" required>
+				<label>
+					<b>Poids</b>
+				</label>
+				<input name="poids" type="text" id="poids" required>
+				<label>
+					<b>nom</b>
+				</label>
+				<input name="nom" type="text" id="nom" required>
+				<label>
+					<b>couleur</b>
+				</label>
+				<input name="couleur" type="text" id="couleur" required>
+				
+				
+				<br/>
+				<br/><br/>
+				<button onclick="effacer3()">effacer</button>
+				<button onclick="ajoutAnim()">ajouter</button>
+			</form>`;
+			
+	} else {
+		document.getElementById("formulaireAjoutAnimal").innerText =''
+	}
+	
+}
+
+function ajoutAnim(){
+	var race = document.getElementById("race").value;
+	var poids = document.getElementById("poids").value;
+	var nom = document.getElementById("nom").value;
+	var couleur = document.getElementById("couleur").value;
+	var xhr = new XMLHttpRequest();
+		xhr.onreadystatechange = function(){
+			if (xhr.readyState == 4 && (xhr.status == 200 || xhr.status == 0)) {
+				alert(xhr.responseText);
+			}
+		};
+		xhr.open("GET","../controller/ajoutAnimalBDD.php?race="+race+"&poids="+poids+"&nom="+nom+"&couleur="+couleur,true);
+		xhr.send(null);	
+
+}
+
+function effacer3(){
+	document.getElementById("race").value = '';
+	document.getElementById("poids").value = '';
+	document.getElementById("nom").value = '';
+	document.getElementById("couleur").value = '';
+}

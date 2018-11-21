@@ -3,11 +3,11 @@
 				<label class="w3-label w3-text-blue">
 					<b>Login</b>
 				</label>
-				<input name="login" type="text" id="login" required>
+				<input name="login" type="text" id="login2" required>
 				<label>
 					<b>Mot de passe</b>
 				</label>
-				<input name="mdp" type="text" id="mdp" required>
+				<input name="mdp" type="text" id="mdp2" required>
 				<label>
 					<b>nom</b>
 				</label>

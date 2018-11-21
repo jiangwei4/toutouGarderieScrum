@@ -20,7 +20,11 @@
 		}
 		
 		if ((isset($_SESSION['id'])) && (!is_nan($_SESSION['id']))){
-			?><a href="../modele/deconnexion.php">se deconnecter</a><?php
+			?><a href="../modele/deconnexion.php">se deconnecter</a><br>
+			<button onclick="afficherAjouterAnimal()">ajouter un animal</button>
+			<div id="formulaireAjoutAnimal"></div><?php
+		
+			
 		}
 		
 	?>
