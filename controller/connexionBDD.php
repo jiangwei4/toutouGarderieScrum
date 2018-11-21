@@ -21,7 +21,6 @@ if ($mysqli->connect_errno) {
 
 }
 if($utilisateurExiste != 0){
-
 	$_SESSION['id'] = $utilisateurExiste;
  echo 'vous êtes logée';
 } else {

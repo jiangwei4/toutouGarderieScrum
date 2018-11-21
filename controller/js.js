@@ -15,3 +15,8 @@ function connexion() {
 	}
 }
 
+
+function effacer(){
+	document.getElementById("login").value = '';
+	document.getElementById("mdp").value = '';
+}

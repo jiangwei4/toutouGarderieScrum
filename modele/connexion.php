@@ -9,11 +9,7 @@
 				</label>
 				<input name="mdp" type="text" id="mdp" required>
 				<br/>
-				<input type="checkbox">				
-				<label class="w3-label w3-text-black">
-					<b>Se souvenir de moi</b>
-				</label>
 				<br/><br/>
-				<button >effacer</button>
+				<button onclick="effacer()">effacer</button>
 				<button onclick="connexion()">connexion</button>
 			</form>
