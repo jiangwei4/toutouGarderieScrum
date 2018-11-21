@@ -1,4 +1,5 @@
 <?php
+	session_start();
 $mdp = $_GET['mdp'];
 $login = $_GET['login'];
 $utilisateurExiste = 0;
@@ -20,7 +21,7 @@ if ($mysqli->connect_errno) {
 
 }
 if($utilisateurExiste != 0){
-	session_start();
+
 	$_SESSION['id'] = $utilisateurExiste;
  echo 'vous êtes logée';
 } else {

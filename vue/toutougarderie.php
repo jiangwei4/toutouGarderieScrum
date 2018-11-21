@@ -15,15 +15,15 @@
 <body>
    <?php 
 		session_start();
-		if ($_SESSION['id']==''){
+		if ((!isset($_SESSION['id'])) || is_nan($_SESSION['id'])){
 			include("../modele/connexion.php");
 		}
 		
-		if ($_SESSION['id']!=''){
-			include("../modele/deconnexion.php");
+		if ((isset($_SESSION['id'])) && (!is_nan($_SESSION['id']))){
+			?><a href="../modele/deconnexion.php">se deconnecter</a><?php
 			
 		}
-		echo $_SESSION['id'];
+		
 	?>
 	
 

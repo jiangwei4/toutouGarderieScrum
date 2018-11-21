@@ -1,2 +1,4 @@
-<h1><center><b>Se deconnecter</b></center></h1>
-<button onclick="deconnexion()">deconnexion</button>
+<?php
+session_start();
+session_destroy();
+header ("location:../vue/toutougarderie.php");
