@@ -12,4 +12,10 @@
 				<br/><br/>
 				<button onclick="effacer()">effacer</button>
 				<button onclick="connexion()">connexion</button>
+				
+				
 			</form>
+			
+			<button onclick="inscription()">s'inscrire</button>
+			<div id="inscriptionDiv"></div>
+			

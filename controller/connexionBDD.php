@@ -18,7 +18,7 @@ if ($mysqli->connect_errno) {
 	while ($row = mysqli_fetch_row($res)){
 		$utilisateurExiste = $row[0]; //recuperation de l'id
 	}
-
+$mysqli->close();
 }
 if($utilisateurExiste != 0){
 	$_SESSION['id'] = $utilisateurExiste;

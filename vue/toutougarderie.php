@@ -21,7 +21,6 @@
 		
 		if ((isset($_SESSION['id'])) && (!is_nan($_SESSION['id']))){
 			?><a href="../modele/deconnexion.php">se deconnecter</a><?php
-			
 		}
 		
 	?>
