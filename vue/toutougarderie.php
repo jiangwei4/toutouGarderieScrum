@@ -22,7 +22,33 @@
 		if ((isset($_SESSION['id'])) && (!is_nan($_SESSION['id']))){
 			?><a href="../modele/deconnexion.php">se deconnecter</a><br>
 			<button onclick="afficherAjouterAnimal()">ajouter un animal</button>
-			<div id="formulaireAjoutAnimal"></div><?php
+			<div id="formulaireAjoutAnimal" display="none"><h1><center><b>Ajouter Animal</b></center></h1>
+			<form class="w3-container" name="formulaire1">
+				<label class="w3-label w3-text-blue">
+					<b>Race</b>
+				</label>
+				<input name="race" type="text" id="race" required>
+				<label>
+					<b>Poids</b>
+				</label>
+				<input name="poids" type="text" id="poids" required>
+				<label>
+					<b>nom</b>
+				</label>
+				<input name="nom" type="text" id="nom" required>
+				<label>
+					<b>couleur</b>
+				</label>
+				<input name="couleur" type="text" id="couleur" required>
+				
+				
+				<br/>
+				<br/><br/>
+				<button onclick="effacer3()">effacer</button>
+				<button onclick="ajoutAnim()">ajouter</button>
+			</form></div>
+			<button onclick="afficherAnimal()">afficher animal</button>
+			<div id="afficherAnimal"><?php include("../controller/afficherAnimalBDD.php");?></div><?php
 		
 			
 		}

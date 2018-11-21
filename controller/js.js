@@ -20,43 +20,13 @@ function effacer(){
 	document.getElementById("mdp").value = '';
 }
 function inscription(){
-	if(document.getElementById("inscriptionDiv").innerText === '' ){
-	document.getElementById("inscriptionDiv").innerHTML = `<h1><center><b>inscription</b></center></h1>
-			<form class="w3-container" name="formulaire1">
-				<label class="w3-label w3-text-blue">
-					<b>Login</b>
-				</label>
-				<input name="login" type="text" id="login2" required>
-				<label>
-					<b>Mot de passe</b>
-				</label>
-				<input name="mdp" type="text" id="mdp2" required>
-				<label>
-					<b>nom</b>
-				</label>
-				<input name="nom" type="text" id="nom" required>
-				<label>
-					<b>prenom</b>
-				</label>
-				<input name="prenom" type="text" id="prenom" required>
-				<label>
-					<b>tel</b>
-				</label>
-				<input name="tel" type="text" id="tel" required>
-				<label>
-					<b>adresse</b>
-				</label>
-				<input name="adresse" type="text" id="adresse" required>
-
-				
-				<br/>
-				<br/><br/>
-				<button onclick="effacer2()">effacer</button>
-				<button onclick="inscription2()">s'enregistrer</button>
-			</form>`;
+	
+		if(document.getElementById("inscriptionDiv").style.display == 'none' ){
 			
+				document.getElementById("inscriptionDiv").style.display = 'block';
+		
 	} else {
-		document.getElementById("inscriptionDiv").innerText =''
+		document.getElementById("formulaireAjoutAnimal").style.display = 'none';
 	}
 }
 
@@ -92,35 +62,12 @@ function inscription2() {
 }
 
 function afficherAjouterAnimal(){
-		if(document.getElementById("formulaireAjoutAnimal").innerText === '' ){
-	document.getElementById("formulaireAjoutAnimal").innerHTML = `<h1><center><b>Ajouter Animal</b></center></h1>
-			<form class="w3-container" name="formulaire1">
-				<label class="w3-label w3-text-blue">
-					<b>Race</b>
-				</label>
-				<input name="race" type="text" id="race" required>
-				<label>
-					<b>Poids</b>
-				</label>
-				<input name="poids" type="text" id="poids" required>
-				<label>
-					<b>nom</b>
-				</label>
-				<input name="nom" type="text" id="nom" required>
-				<label>
-					<b>couleur</b>
-				</label>
-				<input name="couleur" type="text" id="couleur" required>
-				
-				
-				<br/>
-				<br/><br/>
-				<button onclick="effacer3()">effacer</button>
-				<button onclick="ajoutAnim()">ajouter</button>
-			</form>`;
+		if(document.getElementById("formulaireAjoutAnimal").style.display == 'none' ){
 			
+				document.getElementById("formulaireAjoutAnimal").style.display = 'block';
+		
 	} else {
-		document.getElementById("formulaireAjoutAnimal").innerText =''
+		document.getElementById("formulaireAjoutAnimal").style.display = 'none';
 	}
 	
 }
@@ -146,4 +93,15 @@ function effacer3(){
 	document.getElementById("poids").value = '';
 	document.getElementById("nom").value = '';
 	document.getElementById("couleur").value = '';
+}
+
+
+function afficherAnimal(){
+		if(document.getElementById("afficherAnimal").style.display == 'none' ){
+			
+				document.getElementById("afficherAnimal").style.display = 'block';
+		
+	} else {
+		document.getElementById("afficherAnimal").style.display = 'none';
+	}
 }
